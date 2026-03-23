@@ -15,10 +15,12 @@ bool App::connectModbus(const SerialConfig& cfg) {
 
     if (modbus_->connect(cfg, err)) {
         addLog("INFO", "Connected to " + cfg.device);
+        message_queue_.push_back("Connected successfully");
         return true;
     }
 
     addLog("ERROR", "Connect failed: " + err);
+    message_queue_.push_back("Connection failed: " + err);
     return false;
 }
 

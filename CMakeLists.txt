@@ -40,6 +40,8 @@ add_executable(modlazy
     src/ui/LogPanel.cpp
     src/ui/HelpPanel.cpp
     src/ui/CommandBar.cpp
+    src/ui/StatusBar.cpp
+    src/ui/MessageBox.cpp
 )
 
 target_include_directories(modlazy PRIVATE

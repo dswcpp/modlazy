@@ -9,6 +9,7 @@ class OperationPanel;
 class LogPanel;
 class HelpPanel;
 class CommandBar;
+class StatusBar;
 
 class MainView {
 public:
@@ -26,4 +27,8 @@ private:
     std::unique_ptr<LogPanel> log_panel_;
     std::unique_ptr<HelpPanel> help_panel_;
     std::unique_ptr<CommandBar> cmd_bar_;
+    std::unique_ptr<StatusBar> status_bar_;
+
+    bool show_message_ = false;
+    std::string message_text_;
 };
