@@ -42,6 +42,10 @@ add_executable(modlazy
     src/ui/CommandBar.cpp
     src/ui/StatusBar.cpp
     src/ui/MessageBox.cpp
+    src/graph/StateGraph.cpp
+    src/graph/nodes/IdleNode.cpp
+    src/graph/nodes/ConnectNode.cpp
+    src/graph/nodes/ExecuteNode.cpp
 )
 
 target_include_directories(modlazy PRIVATE
