@@ -1,5 +1,6 @@
 #include "MainView.h"
 #include "app/App.h"
+#include "modbus/ModbusClient.h"
 #include "ftxui/component/component.hpp"
 #include "ftxui/component/screen_interactive.hpp"
 #include "ftxui/dom/elements.hpp"
