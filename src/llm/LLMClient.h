@@ -1,0 +1,15 @@
+#pragma once
+
+#include <string>
+#include <vector>
+
+struct Message {
+    std::string role;  // "user" or "assistant"
+    std::string content;
+};
+
+class LLMClient {
+public:
+    virtual ~LLMClient() = default;
+    virtual std::string chat(const std::vector<Message>& messages) = 0;
+};

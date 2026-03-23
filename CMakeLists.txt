@@ -46,6 +46,8 @@ add_executable(modlazy
     src/graph/nodes/IdleNode.cpp
     src/graph/nodes/ConnectNode.cpp
     src/graph/nodes/ExecuteNode.cpp
+    src/graph/nodes/LLMNode.cpp
+    src/llm/MockLLMClient.cpp
 )
 
 target_include_directories(modlazy PRIVATE
