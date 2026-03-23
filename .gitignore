@@ -39,3 +39,15 @@
 
 # debug information files
 *.dwo
+
+# Build directories
+build/
+.cache/
+compile_commands.json
+
+# IDE
+.vscode/
+.idea/
+
+# Binary
+modlazy
