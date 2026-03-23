@@ -28,6 +28,7 @@ public:
     void setConfig(const SerialConfig& cfg) { config_ = cfg; }
 
     void addLog(const std::string& type, const std::string& msg);
+    void executeCommand(const std::string& cmd);
 
 private:
     std::unique_ptr<ModbusClient> modbus_;

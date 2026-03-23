@@ -4,10 +4,16 @@
 #include <memory>
 
 class App;
+class ConnectionPanel;
+class OperationPanel;
+class LogPanel;
+class HelpPanel;
+class CommandBar;
 
 class MainView {
 public:
     explicit MainView(App* app);
+    ~MainView();
 
     ftxui::Component GetComponent();
     void Run();
@@ -15,14 +21,9 @@ public:
 private:
     App* app_;
 
-    ftxui::Component CreateConnectionPanel();
-    ftxui::Component CreateLogPanel();
-    ftxui::Component CreateCommandBar();
-
-    std::string command_input_;
-    int selected_panel_ = 0;
-
-    std::string device_input_ = "/dev/ttyUSB0";
-    std::string baud_input_ = "9600";
-    std::string slave_input_ = "1";
+    std::unique_ptr<ConnectionPanel> conn_panel_;
+    std::unique_ptr<OperationPanel> op_panel_;
+    std::unique_ptr<LogPanel> log_panel_;
+    std::unique_ptr<HelpPanel> help_panel_;
+    std::unique_ptr<CommandBar> cmd_bar_;
 };

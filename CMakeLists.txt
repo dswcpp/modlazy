@@ -35,6 +35,11 @@ add_executable(modlazy
     src/modbus/ModbusClient.cpp
     src/app/App.cpp
     src/ui/MainView.cpp
+    src/ui/ConnectionPanel.cpp
+    src/ui/OperationPanel.cpp
+    src/ui/LogPanel.cpp
+    src/ui/HelpPanel.cpp
+    src/ui/CommandBar.cpp
 )
 
 target_include_directories(modlazy PRIVATE
