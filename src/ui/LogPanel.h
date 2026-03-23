@@ -11,5 +11,5 @@ public:
 
 private:
     App* app_;
-    int scroll_position_ = 0;
+    int scroll_y_ = 0;
 };
